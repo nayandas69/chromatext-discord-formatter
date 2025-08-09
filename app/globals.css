@@ -1,0 +1,70 @@
+/**
+ * ChromaText Global Styles
+ * Neumorphic design system with pink theme
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-pink-50 to-rose-100 text-gray-800;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  /* Neumorphic button styles */
+  .neomorphic-btn {
+    @apply bg-gradient-to-br from-pink-100 to-pink-200;
+    @apply shadow-[8px_8px_16px_#d1d5db,-8px_-8px_16px_#ffffff];
+    @apply border-0 rounded-2xl transition-all duration-300 ease-out;
+    @apply hover:shadow-[4px_4px_8px_#d1d5db,-4px_-4px_8px_#ffffff];
+    @apply active:shadow-[inset_4px_4px_8px_#d1d5db,inset_-4px_-4px_8px_#ffffff];
+  }
+  
+  /* Neumorphic container styles */
+  .neomorphic-container {
+    @apply bg-gradient-to-br from-pink-50 to-pink-100;
+    @apply shadow-[12px_12px_24px_#d1d5db,-12px_-12px_24px_#ffffff];
+    @apply rounded-3xl border-0;
+  }
+  
+  /* Neumorphic input styles */
+  .neomorphic-input {
+    @apply bg-gradient-to-br from-pink-50 to-pink-100;
+    @apply shadow-[inset_8px_8px_16px_#d1d5db,inset_-8px_-8px_16px_#ffffff];
+    @apply border-0 rounded-2xl transition-all duration-300;
+  }
+  
+  /* Color picker button styles */
+  .color-btn {
+    @apply w-8 h-8 rounded-xl;
+    @apply shadow-[4px_4px_8px_#d1d5db,-4px_-4px_8px_#ffffff];
+    @apply transition-all duration-200 ease-out cursor-pointer;
+    @apply hover:shadow-[2px_2px_4px_#d1d5db,-2px_-2px_4px_#ffffff];
+    @apply active:shadow-[inset_2px_2px_4px_#d1d5db,inset_-2px_-2px_4px_#ffffff];
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-pink-100 rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-pink-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-pink-400;
+}
